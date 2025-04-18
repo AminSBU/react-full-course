@@ -1,7 +1,7 @@
 function Footer(){
     return(
         <footer>
-            <p>&copy; All copyright are reserved</p>
+            <p>&copy; {new Date().getFullYear()} All copyright are reserved</p>
         </footer>
     );
 }
