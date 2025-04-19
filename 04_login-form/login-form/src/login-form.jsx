@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 function Login()
 {
     return (  
-        <div>  
+        <div>
+            <p className='user-text'>Username</p>
           <input   
             type="text"   
             className="textInput"   
             placeholder="type something..."   
           />
-          <button className='button'>amin</button>
         </div>  
       );  
     } 
