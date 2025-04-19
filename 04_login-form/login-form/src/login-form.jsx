@@ -8,7 +8,8 @@ function Login()
             type="text"   
             className="textInput"   
             placeholder="type something..."   
-          />  
+          />
+          <button className='button'>amin</button>
         </div>  
       );  
     } 
