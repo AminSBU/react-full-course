@@ -23,6 +23,17 @@ function Login()
               required 
             />
           </div>
+
+          <div>
+            <input
+              type='checkbox'
+              className='save-login-checkbox'
+            />save Your information
+          </div>
+
+          <div>
+            <button className='login-button'>login</button>
+          </div>
         </div>  
       );  
     } 
