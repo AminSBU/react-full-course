@@ -1,0 +1,8 @@
+.item-container {  
+    border: 2px solid #4CAF50;  /* green border, 2px thick */  
+    padding: 20px;              /* inner space for better look */  
+    border-radius: 8px;         /* rounded corners */  
+    max-width: 300px;           /* optional: control form width */  
+    margin: 0 auto;             /* optional: center the form */  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */  
+  }
