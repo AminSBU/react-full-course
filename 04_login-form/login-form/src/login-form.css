@@ -6,3 +6,28 @@
     margin: 0 auto;             /* optional: center the form */  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */  
   }
+
+.user-text, .password-text
+{
+  align-self: center;
+  width: 20px;
+}
+
+.textInput
+{
+  border: none;
+  font-size: large;
+}
+
+.save-login-checkbox{
+  margin-top: 20px;
+}
+
+.login-button{
+  margin-top: 20px;
+}
+
+.usernameImg, .passwordImg{
+  width: 20px;
+  height: 20px;
+}

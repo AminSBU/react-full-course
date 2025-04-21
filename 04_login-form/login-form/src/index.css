@@ -66,13 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-.textInput
-{
-  border: none;
-}
-
-.user-text
-{
-  align-self: center;
-}

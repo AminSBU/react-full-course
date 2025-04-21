@@ -5,22 +5,24 @@ function Login()
 {
     return (  
         <div className='item-container'>
-          <h2>Login Form</h2>
+          <h2>Login</h2>
           <p className='user-text'>Username</p>
+          <img src='./img/username-50.png' className='usernameImg'></img>
           <div>
             <input   
               type="text"   
               className="textInput"   
-              placeholder="type something..."   
+              placeholder="type username..."   
             />
           </div>
 
           <div>
-            <p className='user-text'>Password</p>
+            <p className='password-text'>Password</p>
+            <img src='./img/password-50.png' className='passwordImg'></img>
             <input   
               type="text"   
               className="textInput"   
-              placeholder="type something..."  
+              placeholder="type password..."  
               required 
             />
           </div>
