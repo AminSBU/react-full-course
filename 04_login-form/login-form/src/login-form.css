@@ -37,6 +37,10 @@
   transition: background 0.3s ease; 
 }
 
+.button-gradient:hover {  
+  background: linear-gradient(to right, #fb00ff, #00c6ff); /* reverse gradient on hover */  
+}  
+
 .usernameImg, .passwordImg{
   width: 20px;
   height: 20px;
