@@ -1,7 +1,7 @@
-// App.jsx
 import { useState } from 'react'
 import './App.css'
 import Button from './Button.jsx'
+import './Button.css'
 
 function App() {
   const [count, setCount] = useState(0)
