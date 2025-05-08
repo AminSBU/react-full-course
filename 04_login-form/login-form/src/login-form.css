@@ -24,8 +24,22 @@
 }
 
 .login-button{
+  color: white;
+  background: linear-gradient(to right, #00c6ff, #fb00ff);
+  color: white;  
+  padding: 10px 30px;  
+  border: none;  
+  border-radius: 25px;  
+  font-size: 16px;  
+  cursor: pointer;
+  width: 250px;
   margin-top: 20px;
+  transition: background 0.3s ease; 
 }
+
+.button-gradient:hover {  
+  background: linear-gradient(to right, #fb00ff, #00c6ff); /* reverse gradient on hover */  
+}  
 
 .usernameImg, .passwordImg{
   width: 20px;
