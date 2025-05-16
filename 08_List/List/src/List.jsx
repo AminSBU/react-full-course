@@ -5,9 +5,11 @@ function List(){
                     {id: 3, name: "Banana", calories: 99}, 
                     {id: 4, name: "Kiwi",   calories: 80}];
 
-    const ListItems = fruits.map(fruits => <li key={fruits.id}>
-                                                                {fruits.name}: &nbsp;
-                                                                {fruits.calories}</li>);
+    const lowCalFruits = fruits.filter(fruits => fruits.calories < 95);
+
+    const ListItems = lowCalFruits.map(lowCalFruits => <li key={lowCalFruits.id}>
+                                                                {lowCalFruits.name}: &nbsp;
+                                                                {lowCalFruits.calories}</li>);
 
     return(<ol>{ListItems}</ol>);
 }
