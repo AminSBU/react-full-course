@@ -4,7 +4,7 @@ function List(){
 
     const ListItems = fruits.map(fruits => <li>{fruits}</li>);
 
-    return(<ul>{ListItems}</ul>);
+    return(<ol>{ListItems}</ol>);
 }
 
 export default List;
