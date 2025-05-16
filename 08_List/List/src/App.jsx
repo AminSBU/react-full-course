@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import List from './List.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const fruits = [
+    {id: 1, name: "Apple", calories: 90},
+    {id: 2, name: "Orange", calories: 50},
+    {id: 3, name: "Banana", calories: 99},
+    {id: 4, name: "Kiwi", calories: 80}
+  ];
 
   return (
-    <>
-      <List />
-    </>
-  )
+    <List items={fruits} category="Fruits" />
+  );
 }
 
-export default App
+export default App;
