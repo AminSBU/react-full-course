@@ -1,15 +1,18 @@
 import React, {useState} from 'react'
 function MyComponent(){
     const [name, setName] = useState("Guest");
+    const [age, setAge] = useState(0);
 
-    const updateName = () => {
+    const updateParameters = () => {
         setName("Amin");
+        setAge(34);
     }
 
     return(
         <div>
             <p>Name: {name}</p>
-            <button onClick={updateName}>Set Name</button>
+            <p>Age: {age}</p>
+            <button onClick={updateParameters}>Set Name</button>
         </div>
     );
 }
