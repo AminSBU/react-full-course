@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 function Counter(){
-    const [count, setCounter] = useState();
+    const [count, setCounter] = useState(0);
 
     const increament = () => {
         setCounter(count + 1);
