@@ -6,19 +6,19 @@ function MyComponent(){
     const [comment, setComment]         = useState("");
     const [payment, setPayment]         = useState("");
 
-    const onChangeHandler = (event) => {
+    function onChangeHandler(event) {
         setInputValue(event.target.value);
     }
 
-    const onClickHandler = () => {
+    function onClickHandler(){
         setName(inputValue);
     }
 
-    const onCommentHandler = (event) => {
+    function onCommentHandler(event){
         setComment(event.target.value);
     }
 
-    const onSelectHandler = (event) => {
+    function onSelectHandler(event){
         setPayment(event.target.value);
     }
 
