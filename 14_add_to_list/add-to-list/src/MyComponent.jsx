@@ -15,8 +15,8 @@ function MyComponent() {
         setFood([...food, newFood]);
     }
 
-    function RemoveFromListHandler(){
-
+    function RemoveFromListHandler(index) {
+        setFood(food.filter((__, i) => i !== index));
     }
 
     return(
@@ -24,7 +24,7 @@ function MyComponent() {
             <div>
                 <ul>
                     <h2>Foods List</h2>
-                    {food.map((food, index) => <li key={index}>{food}</li>)}
+                    {food.map((food, index) => <li key={index} onClick={() => RemoveFromListHandler(index)}>{food}</li>)}
                 </ul>
 
                 <input ref={inputRef} type="text" placeholder="type your food ..." />
