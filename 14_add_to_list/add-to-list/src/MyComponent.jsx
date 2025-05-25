@@ -1,11 +1,16 @@
-import React, {useState} from "react";
+import React, { useState, useRef } from "react";
 
-function MyComponent(){
-    const [food, setFood] = useState(["apple", "orange", "strawberry"]);
+function MyComponent() {
+  const [food, setFood] = useState(["apple", "orange", "strawberry"]);
+  const inputRef = useRef(null);
 
-    function AddToListHandler(){
-        const newFood = document.getElementById(getFood).value;
-        document.getElementById(getFood).value = "";
+    function AddToListHandler() {
+        const newFood = inputRef.current.value;
+
+        console.log(newFood);
+
+        // Clear the input after adding
+        inputRef.current.value = "";
 
         setFood([...food, newFood]);
     }
@@ -22,7 +27,7 @@ function MyComponent(){
                     {food.map((food, index) => <li key={index}>{food}</li>)}
                 </ul>
 
-                <input type="text" id="getFood" placeholder="type your food ..."/>
+                <input ref={inputRef} type="text" placeholder="type your food ..." />
                 <button onClick={AddToListHandler}>Add food</button>
             </div>
         </>
