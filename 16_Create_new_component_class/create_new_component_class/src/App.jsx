@@ -2,18 +2,12 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import Home from './Home.jsx';
+import About from './About.jsx';
+import Contact from './Contact.jsx';
 import Blog from './Blog.jsx';
 import NavBar from './NavBar.jsx';
 import { Link, Routes, Route } from 'react-router-dom';
-
-// If you have these components, import them
-// import Home from './Home.jsx';
-// import About from './About.jsx';
-// import Contact from './Contact.jsx';
-// If not, you can define simple placeholders here:
-const Home = () => <div>Home Page</div>;
-const About = () => <div>About Page</div>;
-const Contact = () => <div>Contact Page</div>;
 
 function App() {
   const [count, setCount] = useState(0);

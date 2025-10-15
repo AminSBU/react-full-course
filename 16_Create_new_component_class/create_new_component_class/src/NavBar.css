@@ -1,0 +1,45 @@
+.navbar {
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0; /* Aligns it to the top of the viewport */
+  left: 0; /* Aligns it to the left */
+  width: 100%; /* Makes it span the full width */
+  background-color: #d6d3d3; /* Dark background for visibility */
+  z-index: 1000; /* Ensures it stays above other content */
+  padding: 10px 0; /* Adds some padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+}
+
+.Nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Nav li {
+  margin: 0 15px; /* Adds spacing between buttons */
+}
+
+.Nav li button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Removes default border */
+  padding: 8px 16px; /* Adds padding to buttons */
+  border-radius: 5px; /* Rounds button corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Adjusts font size */
+}
+
+.Nav li button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Optional: Active link styling */
+.Nav li a.active button {
+  background-color: #28a745; /* Green for active link */
+}
+
+.btn{
+  margin-right: 10px;
+}
