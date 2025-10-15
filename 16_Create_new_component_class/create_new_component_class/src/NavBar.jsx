@@ -1,32 +1,17 @@
 import React from "react";
-import { Link } from 'rect-router-dom'
+import { Link, Routes, Route } from 'react-router-dom';
 
-const NavBar = () => (
-    <ul className="NavBar">
-        <li>
-            <Link to="/">
-                <button>Shop</button>
-            </Link>
-        </li>
-            
-        <li>
-            <Link to="/blog">
-                <button>blog</button>
-            </Link>
-        </li>
-            
-        <li>
-            <Link to="/about">
-                <button>Shop</button>
-            </Link>
-        </li>
-
-        <li>
-            <Link to="/contact">
-                <button>Shop</button>
-            </Link>
-        </li>
-    </ul>
-)
+function NavBar() {
+  return (
+    <nav>
+      <ul>
+        <Link to="/"><button>Home</button></Link>
+        <Link to="/about"><button>About</button></Link>
+        <Link to="/contact"><button>Contact</button></Link>
+        <Link to="/blog"><button>Blog</button></Link>
+      </ul>
+    </nav>
+  );
+}
 
 export default NavBar;
