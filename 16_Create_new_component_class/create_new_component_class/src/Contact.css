@@ -1,0 +1,18 @@
+.contact-container
+{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.txtbox
+{
+    margin-top: 10px;
+}
+
+.txtbox textarea
+{
+    margin-top: 10px;
+    height: 100px;
+    width: 300px;
+}
