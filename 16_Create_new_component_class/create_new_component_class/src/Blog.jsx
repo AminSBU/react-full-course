@@ -4,13 +4,20 @@ import './Blog.css'
 
 const Blog = () => {
     const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(false)
+
     const handleLoad = () => {
-        setPosts(POSTS);
+        setLoading(true)
+        setTimeout(() => {
+            setPosts(POSTS);
+            setLoading(false)
+        }, 1000)
     }
 
     return(
         <div className="post-contents">
             <button onClick={handleLoad}>Load Posts</button>
+            {loading ? 'Loading ...' : 'Completed.'}
             {posts.length === 0 && <div>Empty</div>}
             {posts.length > 0 && (
             <ul>
