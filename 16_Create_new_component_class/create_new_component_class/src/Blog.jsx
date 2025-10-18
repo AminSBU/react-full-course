@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import POSTS from './POSTS.json'
 import './Blog.css'
 
@@ -13,6 +13,11 @@ const Blog = () => {
             setLoading(false)
         }, 1000)
     }
+
+    useEffect(() => {
+        console.log('useEffect');
+        handleLoad();
+    }, []); // تنها یک‌بار اجرا می‌شود
 
     return(
         <div className="post-contents">
