@@ -4,10 +4,15 @@ import './Blog.css'
 
 const Blog = () => {
     const [posts, setPosts] = useState([])
+    const handleLoad = () => {
+        setPosts(POSTS);
+    }
+
     return(
         <div className="post-contents">
-            <button>Load Posts</button>
+            <button onClick={handleLoad}>Load Posts</button>
             {posts.length === 0 && <div>Empty</div>}
+            {posts.length > 0 && (
             <ul>
                 {POSTS.map((post) => (
                     <li key={post.id}>
@@ -16,6 +21,7 @@ const Blog = () => {
                     </li>
                 ))}
             </ul>
+            )}
         </div>
     );
 };
