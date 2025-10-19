@@ -1,25 +1,21 @@
 import React, {useState, useEffect} from "react";
-import POSTS from './POSTS.json'
 import './Blog.css'
 
 const Blog = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
-    const [loaded, setLoaded] = useState(false)
 
-    const handleLoad = () => {
+    const LoadPosts = async () => {
         setLoading(true)
         //setLoaded(true)
-        setTimeout(() => {
-            setPosts(POSTS);
-            setLoading(false)
-        }, 1000)
+        const responsePosts = await fetch('https://dummyjson.com/posts')
+        const post = await responsePosts.json()
+        setPosts(post)
     }
 
     useEffect(() => {
-        console.log('useEffect');
-        handleLoad();
-    }, [loaded]);
+        LoadPosts();
+    }, []);
 
     return(
         <div className="post-contents">
