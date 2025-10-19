@@ -34,7 +34,7 @@ const Blog = () => {
 
       {!loading && posts.length > 0 && (
         <ul>
-          {posts.map((post) => (
+          {posts.slice(0,3).map((post) => (
             <li key={post.id}>
               <h3>{post.title}</h3>
               <p>{post.body}</p>
