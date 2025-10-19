@@ -5,9 +5,11 @@ import './Blog.css'
 const Blog = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
+    const [loaded, setLoaded] = useState(false)
 
     const handleLoad = () => {
         setLoading(true)
+        //setLoaded(true)
         setTimeout(() => {
             setPosts(POSTS);
             setLoading(false)
@@ -17,12 +19,12 @@ const Blog = () => {
     useEffect(() => {
         console.log('useEffect');
         handleLoad();
-    }, []); // تنها یک‌بار اجرا می‌شود
+    }, [loaded]);
 
     return(
         <div className="post-contents">
             <button onClick={handleLoad}>Load Posts</button>
-            {loading ? 'Loading ...' : 'Completed.'}
+            {/* {loading ? 'Loading ...' : 'Completed.'} */}
             {posts.length === 0 && <div>Empty</div>}
             {posts.length > 0 && (
             <ul>
