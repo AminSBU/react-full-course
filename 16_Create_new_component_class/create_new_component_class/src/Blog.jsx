@@ -59,7 +59,7 @@ const Blog = () => {
       )}
       <div>
         {Array.from({ length: pageCount }).map((_, index) => (
-          <button>{index + 1}</button>
+          <button className="pagecounts">{index + 1}</button>
         ))}
       </div>
     </div>
