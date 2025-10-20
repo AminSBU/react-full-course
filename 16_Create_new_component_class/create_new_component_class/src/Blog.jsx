@@ -58,13 +58,9 @@ const Blog = () => {
         </ul>
       )}
       <div>
-        <ul>
-        {new Array(pageCount).fill(0).map((item,index) => {
-          <li>
-            <button>{index + 1}</button>
-          </li>
-        })}
-        </ul>
+        {Array.from({ length: pageCount }).map((_, index) => (
+          <button>{index + 1}</button>
+        ))}
       </div>
     </div>
   );
