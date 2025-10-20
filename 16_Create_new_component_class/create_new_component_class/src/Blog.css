@@ -3,7 +3,13 @@
     color: white;
 }
 
-.pagecounts
+.inactivePage
 {
     margin-right: 10px;
+}
+
+.activePage{
+    margin-right: 10px;
+    color: black;
+    background-color: aqua;
 }

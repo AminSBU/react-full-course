@@ -5,13 +5,13 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [pageCount, setPageCount] = useState(0);
+  const [activePageNumber, setActivePageNumber] = useState(1);
 
   const LoadPosts = async () => {
     setLoading(true);
     try {
       const response = await fetch("https://dummyjson.com/posts");
       const data = await response.json();
-      // data.posts is the array of posts
       setPosts(data.posts || []);
     } catch (error) {
       console.error("Failed to load posts:", error);
@@ -21,23 +21,21 @@ const Blog = () => {
     }
   };
 
+  const pageNumberClick = (pageNumber) => {
+    setActivePageNumber(pageNumber);
+  };
+
   useEffect(() => {
     LoadPosts();
   }, []);
 
-  useEffect(() =>{
-    setPageCount(CalculatePages())
+  useEffect(() => {
+    setPageCount(CalculatePages());
   }, [posts]);
 
-  console.log("pageCount", pageCount)
-
   const CalculatePages = () => {
-    if(posts.length % 3 > 0)
-    {
-      return parseInt(posts.length / 3 + 1);
-    }
-    return parseInt(posts.length / 3);
-  }
+    return posts.length > 0 ? Math.ceil(posts.length / 3) : 0;
+  };
 
   return (
     <div className="post-contents">
@@ -49,7 +47,7 @@ const Blog = () => {
 
       {!loading && posts.length > 0 && (
         <ul>
-          {posts.slice(0,3).map((post) => (
+          {posts.slice((activePageNumber - 1) * 3, activePageNumber * 3).map((post) => (
             <li key={post.id}>
               <h3>{post.title}</h3>
               <p>{post.body}</p>
@@ -59,7 +57,13 @@ const Blog = () => {
       )}
       <div>
         {Array.from({ length: pageCount }).map((_, index) => (
-          <button className="pagecounts">{index + 1}</button>
+          <button
+            key={index}
+            className={activePageNumber === index + 1 ? 'activePage' : 'inactivePage'}
+            onClick={() => pageNumberClick(index + 1)}
+          >
+            {index + 1}
+          </button>
         ))}
       </div>
     </div>
