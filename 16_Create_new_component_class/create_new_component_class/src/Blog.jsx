@@ -4,6 +4,7 @@ import "./Blog.css";
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [pageCount, setPageCount] = useState(0);
 
   const LoadPosts = async () => {
     setLoading(true);
@@ -24,6 +25,20 @@ const Blog = () => {
     LoadPosts();
   }, []);
 
+  useEffect(() =>{
+    setPageCount(CalculatePages())
+  }, []);
+
+  console.log("pageCount", pageCount)
+
+  const CalculatePages = () => {
+    if(posts.length % 3 > 0)
+    {
+      return parseInt(posts.length / 3 + 1);
+    }
+    return parseInt(posts.length / 3);
+  }
+
   return (
     <div className="post-contents">
       <button onClick={LoadPosts}>Load Posts</button>
@@ -41,6 +56,8 @@ const Blog = () => {
             </li>
           ))}
         </ul>
+
+        
       )}
     </div>
   );
