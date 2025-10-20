@@ -39,8 +39,6 @@ const Blog = () => {
 
   return (
     <div className="post-contents">
-      <button onClick={LoadPosts}>Load Posts</button>
-
       {loading && <div>Loading...</div>}
 
       {!loading && posts.length === 0 && <div>Empty</div>}
