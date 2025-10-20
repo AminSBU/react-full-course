@@ -27,7 +27,7 @@ const Blog = () => {
 
   useEffect(() =>{
     setPageCount(CalculatePages())
-  }, []);
+  }, [posts]);
 
   console.log("pageCount", pageCount)
 
