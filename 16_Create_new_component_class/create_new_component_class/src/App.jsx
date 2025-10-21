@@ -8,6 +8,7 @@ import Contact from './Contact.jsx';
 import Blog from './Blog.jsx';
 import NavBar from './NavBar.jsx';
 import Footer from './footer.jsx';
+import ThemeContext from './ThemeContext.js';
 
 import { Link, Routes, Route } from 'react-router-dom';
 
