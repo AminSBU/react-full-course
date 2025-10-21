@@ -16,6 +16,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <ThemeContext.Provider>
     <div className="App">
       <NavBar />
       <Routes>
@@ -28,6 +29,7 @@ function App() {
       <Footer />
 
     </div>
+    </ThemeContext.Provider>
   );
 }
 
